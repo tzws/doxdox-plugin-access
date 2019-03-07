@@ -19,7 +19,7 @@ const plugin = data => new Promise((resolve, reject) => {
     }
   );
 
-  return resolve((JSON.stringify(result, null, 2)));
+  return resolve("module.exports = " + (JSON.stringify(result, null, 2)));
 });
 
 module.exports = plugin;
