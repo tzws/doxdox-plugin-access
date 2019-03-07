@@ -13,7 +13,8 @@ const plugin = data => new Promise((resolve, reject) => {
   data.files.filter(item => item.methods.length > 0).map(everyEach => 
     {
       everyEach.methods.map(m1 => {
-        result[ /^__/.exec(m1.name) ? m1.name.substring(2) : m1.name ] = m1.tags.access.map(elem => elem.name).join('');
+		  if(m1.tags.access && m1.tags.access.length > 0)
+			  result[ /^__/.exec(m1.name) ? m1.name.substring(2) : m1.name ] = m1.tags.access.map(elem => elem.name).join('');
       });
     }
   );
