@@ -21,9 +21,6 @@
   "license": "MIT",
   "main": "index.js",
   "name": "doxdox-plugin-access",
-  "peerDependencies": {
-    "doxdox": "~2.0.3"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/tzws/doxdox-plugin-access.git"
